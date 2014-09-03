@@ -16,8 +16,9 @@ export GS_GROOVY_HOME=$GSDIR/tools/groovy/
 export EXT_JAVA_OPTIONS="-Dcom.gs.multicast.enabled=false"
 UUID=asdfsd
 
-source /tmp/virtenv_is/bin/activate
 source ~/.bashrc
+source /tmp/virtenv_is/bin/activate
+
 
 UUID=`uuidgen`
 
