@@ -15,16 +15,16 @@ types:
     xap_node:
         derived_from: cloudify.types.bash.app_server
         properties:
-            - GSA_JAVA_OPTS: ""
+            - GSA_JAVA_OPTIONS: ""
             - gsm_cnt: 0
             - global_gsm_cnt: 0
-            - GSM_JAVA_OPTS: ""
+            - GSM_JAVA_OPTIONS: ""
             - lus_cnt: 0
             - lus_port: 0
-            - LUS_JAVA_OPTS: ""
+            - LUS_JAVA_OPTIONS: ""
             - global_lus_cnt: 0
             - gsc_cnt: 0
-            - GSC_JAVA_OPTS
+            - GSC_JAVA_OPTIONS
             - download_url: "http://repository.cloudifysource.org/com/gigaspaces/xap-core/10.0.0-11600-RELEASE/gigaspaces-xap-premium-10.0.0-ga-b11600.zip"
             - license_key: ""
             - scripts:
@@ -70,7 +70,7 @@ blueprint:
             properties:
                 lus_cnt: 1
                 gsm_cnt: 1
-                GSC_JAVA_OPTS: -Xms128m -Xmx128m
+                GSC_JAVA_OPTIONS: -Xms128m -Xmx128m
             relationships:
                 -   target: xap_mgmt_vm
                     type: cloudify.relationships.contained_in
@@ -114,7 +114,7 @@ blueprint:
             type: xap_node
             properties:
                 gsc_cnt: 1
-                GSC_JAVA_OPTS: -Xms128m -Xmx128m
+                GSC_JAVA_OPTIONS: -Xms128m -Xmx128m
             relationships:
                 -   target: xap_container_vm
                     type: cloudify.relationships.contained_in
